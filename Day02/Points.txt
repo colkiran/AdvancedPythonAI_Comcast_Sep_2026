@@ -1,0 +1,112 @@
+Day 1
+-----
+
+Decorators
+----------
+Nested functions
+
+Generators
+Advanced Python Features
+
+python 3.13 - tensorflow
+
+Python 3.12
+Editor - PyCharm
+
+---------------------------------------------------------
+
+Global - can be accessed anywhere in the code
+
+Local - declared inside a function and cannot be accessed outside the function
+
+nonlocal - nested functions (only local variables can be used as nonlocal variables)
+
+---------------------------------------------------------------------
+@dec1
+@dec2
+def fun():
+   print("Hello World")
+
+
+fun()
+
+---------------------------
+***************************
+Hello World
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
+
+
+
+What are generators? what is the use of it?
+Generator is a special type of function that returns an iterator object allowing you to produce a sequence of values over time and only demand instead of computing them all at once.
+
+What are iterators?
+iterator is an object that represents a stream of data and returns on element at a time.
+
+Python iterator
+---------------
+__iter__()
+__next__()
+
+iterator allows lazy evaluation
+
+
+
+Day 2
+------
+• Advanced Data Structures
+• Typing
+• Performance Optimization
+
+
+
+Advanced Data Structures
+------------------------
+1. Lists
+2. Tuples
+3. dictionary
+4. sets
+
+Deque
+-----
+Deque (deck) is a double ended queue from python's collection module
+
+allows fast append and pop's at both the ends
+
+flexible queue that can act like a (LIFO) Stack and a Queue (FIFO) 
+
+
+10
+
+avg = 10/1 = 10.0
+
+20
+
+[10, 20] 
+
+10 + 20 / 2 = 15.0
+
+[10, 20, 30]
+
+10 + 20 + 30 / 3 = 20
+ 
+[20, 30, 40]
+
+20 + 30 + 40 / 3 = 30
+
+
+Counter
+-------
+count of occurrences of elements
+ 
+
+
+
+
+
+
+
+
+
+
