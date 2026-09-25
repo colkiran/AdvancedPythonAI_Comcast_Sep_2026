@@ -1,0 +1,20 @@
+Advanced Data structures
+Typing
+
+Performance Tuning
+------------------
+1. profile before optimizing
+2. Use built-in functions and libraries
+3. Vectorize with numpy / pandas
+4. Choose efficient data structures
+5. Leverage Modern Interpreters
+6. Compile hot paths
+7. Asynchronous and parallel Executions
+8. Memory Management
+9. Algorithmic improvement
+10. Minimize external overheads
+
+
+
+Typing Module
+-------------
