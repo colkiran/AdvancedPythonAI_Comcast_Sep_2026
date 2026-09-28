@@ -1,0 +1,152 @@
+
+• File Processing
+• Logging Framework
+• Exception Handling Best Practices
+
+File Processing
+---------------
+open() -> r, w, a, r+, w+, a+
+
+read() -> read() - reads the entire file or we can specify the no of bytes to be read
+
+	  readline -> reads one line at a time (till it encounters the return key)
+	
+          readlines -> reads all the lines and stores it in a list. Each line is a 			       element in the list.
+
+context manager
+---------------
+with statement
+
+1. it ensures that the file is closed even if a exception occurs
+
+2. prevents resource leak and "Too many open files" errors
+
+
+with keyword the context manager calls the __enter__() method
+
+when we exit the block its __exit__() method is called even if the exception occurs
+
+this guarantees proper cleanup
+
+
+Random File Access
+------------------
+Whence
+
+FL.seek(no_of_bytes, whence)
+
+Whence = 0 - calculate from BOF
+         1 - calculate from Current Position
+	 2 - calculate from EOF
+
+
+Encoding
+---------
+default encoding  - (Unicode text format) utf-8
+
+utf-8-sig that handles Byte Order Mark (BOM)
+
+utf-16 / utf-16-le / utf-16-be
+encode characters using 2 and 4 bytes, you can specify the exact byte order
+le - Little Edian
+be - Big Edian
+
+utf-32 / utf-32-le / utf-32-be
+fixed width encoding where every character takes exactly 4 bytes, it is rarely used because it consumes significant memory
+
+Legacy encoding
+---------------
+ascii - uses 7 bits to represent a total of 128 English characters
+
+latin-1 - uses 8 bit encoding mapping to the first 256 Unicode characters
+
+cp1252 - the standard windows characters set (often called 'ANSI') which slightly expands to latin-1
+
+Python Codecs
+-------------
+base64 codec : Encodes binary data into ASCII characters that converts text to bytes into standardized network and transmission layout.
+
+hex_code : convert to bytes into hexadecimal representation
+
+rot_13 : A simple ceasar cipher text transform that rotates the letters in to 13 positions
+
+pathlib
+-------
+
+pathlib was introduced in python 3.4
+
+provides the path class for working with filesystem paths
+
+works seamlessly across operating systems (Windows, MAC, Linux)
+
+Makes the code more readable, concise and maintainable compares to strings based path handling
+
+
+Key Features
+------------
+Path Creation: Path("folder/file.txt")
+
+path operation : join, split, parent, name, suffix
+
+file operation: read, write, check existence
+
+Directory traversal : iterate over files and folders
+
+Cross platform safety : avoid manual string concatenation with /
+
+
+		OS Modules				PathLib (modern Way)
+		----------				--------------------
+path join	os.path.join("data", "file.txt"		Path("data") / "file.txt"
+
+file existence  os.path.exists(path)			Path(path).exists()
+
+Read text 	open(path).read()			Path(path).read_text()
+
+Write text 	open("path", "w").write("....")		Path(path).write_text()
+
+Directory 	os.listdit(path)			Path(path).glob("*.txt")
+Traversal	
+
+
+Structured Data Formats
+-----------------------
+we have .CSV files
+
+we have .JSON files
+
+we have Pickle for serialization of object
+
+Serialization
+-------------
+in python there are three different ways to serialize and deserialize objects
+
+1. Marshal Module
+2. Pickle Module
+3. Json module
+4. Shelve
+
+Marshal Module
+--------------
+
+1. it is the oldest module to serialize objects
+2. it is not recommended
+3. mainly used by interpreter
+4. python maintainers can modify the format in backward compatible way
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
