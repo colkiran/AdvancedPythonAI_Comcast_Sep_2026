@@ -1,0 +1,161 @@
+Marshal -> dependent on version of python interpreter
+
+internally marshal is used by python to read and write the compiled bytecode (.pyc files)
+
+Version Dependency - this format of serialized data is not guaranteed to be portable across python versions. A .pyc file created in 3.9 may not be readable in python 3.11 because the bytecode format changes
+
+its mainly intended for python's own internal use not for general purpose object serialization
+
+for cross platform serialization we should use pickle or json which are designed for compatibility and human readability
+
+PICKLE
+------
+serialization (pickling) converts python objects into byte stream
+
+a. it traverses the object recursively
+b. stores the type information (eg. list, dict, custom class)
+c. Handles references to avoid duplicating shared objects
+
+Deserialization (unpickling) Reconstructs the original python object from the by stream
+
+a. Reads the code and data from the stream
+b. Recreates the object structure in memory
+
+Protocols
+a. Text based (older, human-readable)
+b. Binary protocol (newer, faster, more-efficient)
+c. latest protocol is chosen by default in modern python versions
+
+Note - never unpickle data from untrusted sources, it can execute arbitrary code
+
+2. shelve
+
+shelve is a Python module that provides a persistent dictionary-like object.
+
+It uses pickle internally to serialize objects, but gives you a key-value store interface (like a dictionary).
+
+Keys must be strings, but values can be any picklable Python object (lists, dicts, custom classes, etc.).
+
+
+Logging Module
+--------------
+logging module is a bult-in python framework for tracking events that happen while your programs run
+
+we can use logging module and write into a log file instead of using print()
+
+Severity levels
+---------------
+DEBUG
+INFO
+WARNINGS
+ERROR
+CRITICAL
+
+Outputs are configurable 
+	- displayed on the console
+	- written into a file or remote server
+
+Timestamps and context are automatically captured
+
+Centralized control over what gets logged
+
+
+-------------------------------------------------------------------
+
+Large application
+-----------------
+app.database
+app.api
+app.auth
+
+each module can have its own child logger , but all inherit configuration from the parent (app)
+
+Centralised configure
+---------------------
+configure logging once at the parent level and all child modules automatically follow the same rules
+
+Consistency 
+-----------
+Ensures uniform formatting levels and destinations across the entire application
+
+Flexibility
+-----------
+you can override child logger settings if needed (eg. make app.database log DEBUG while others log INFO)
+
+
+Exceptions
+----------
+
+try:
+
+	error that prone code 
+
+except: 
+	
+	print the error message
+
+else: 
+
+	no exception then execute this code
+
+finally:
+
+	executes if there is exception or not
+	
+	used to close files and database connections that was opened
+
+
+Advanced OOPS
+-------------
+Class Methods
+
+Inheritance
+
+Polymorphism
+
+Encapsulation
+
+Abstraction
+
+Composition (has a Relationship)
+
+Mixins
+
+MRO
+
+Ducktyping
+
+
+
+Class Methods
+-------------
+What are class methods?
+
+A class method will be bound to the class itself not to the instance
+
+can access and modify the class level attributes
+
+often used for alternate of contructors or shared configuration
+
+
+
+constructor to create a class method @classmethod
+
+first parameter is cls (the class) not self (instance)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
