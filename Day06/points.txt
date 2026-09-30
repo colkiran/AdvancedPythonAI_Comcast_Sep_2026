@@ -1,0 +1,100 @@
+Shared Configuration
+--------------------
+Settings or parameters that are common across all instances of the class
+
+instead of each object having its own copy the configuration is stored at the class level and accessed by all objects
+
+This ensures consistency and avoids duplication if you change the configuration once all objects automatically use the updated settings
+
+
+Inheritance (single, Multiple, Multilevel)
+-----------------------------------------
+
+Bank
+
+Class Withdraw:
+
+   cheque
+   DD
+
+
+Class Debit_Card(Withdraw):
+
+	
+Class Online_Trans(Debit_Card):
+
+
+Class UPI_APPS(Online_Trans):
+
+
+Polymorphism
+-------------
+method or function changes its behaviour depending on the object we pass
+
+
+ATM => 		cards - Normal card		40000	
+			Gold card		1.5 lakhs
+			Platinum card		3 lakhs
+
+
+Movie -> 	ticket - recliner
+			 platinum
+			 Gold
+			 Normal 
+
+Abstract Method
+---------------
+
+Duck Typing
+------------
+
+MRO - Method Resolution Order
+-----------------------------
+
+Mixins
+------
+
+Mixins are special type of class designed to add reusable functionality to other classes
+
+unlike normal inheritance  which models is-a relationship mixins are about "has extra behaviour"
+
+Solid Principles and Design Patterns
+------------------------------------
+
+SOLID is a set of 5 design principles that help developer write clean, maintainable and scalable object oriented code
+
+introduced by Robert C Martin
+
+S 	Single Responsibility Principle(SRP)		one class - one job
+
+O 	Open / Closed Principle (OCP)			open for extension, closed for 
+							modification
+
+L	Liskov Substitution Principle(LSP)		subclasses should behave like 
+							their parent
+
+I	Interfaces Segregation Principle (ISP)		don't force classes to implement 
+							unused methods
+
+D	Dependency inversion principle(DIP)		Depend on abstraction not 
+							concrete classes
+
+
+Two Design Patterns
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
