@@ -1,0 +1,137 @@
+SOLID Principles and Design Pattern
+-----------------------------------
+S - Single Responsibility Principle
+
+O - Open / Close Principle (OCP)
+
+L - Liskov Substitution Principle (LSP)  
+
+I - Interface Segregation Principle (ISP)
+
+D - Dependency Inversion Principle (DIP)
+
+
+SRP - Single Responsibility Principle
+-------------------------------------
+One class - One job
+
+
+OCP - Open for extension and closed for modification
+
+LSP - Liskov Substitution Principle
+
+Objects of the base class should be replaced with objects of the subclass without breaking the programs behaviour
+
+
+if B is a subclass of A, then anywhere you use A, you should be able to use B without surprises
+
+
+Interface Segregation Principle
+-------------------------------
+Clients (classes and modules) should not be forced to depend on methods they don't use
+
+	a. instead a big fat interface, create smaller, more specific ones
+	
+	b. this avoids unnecessary code and keeps classes light weight
+
+
+Dependency Inversion Principle
+------------------------------ 
+high level modules should not depend on low level modules
+
+Both should depend on abstraction (interface)
+
+Abstraction should not depend on details; details should depend on abstraction
+
+Design Patterns
+---------------
+GOF - Gang of Four introduced 23 design patterns and they are grouped into three different categories
+
+1. Creational - object creation mechanism, flexible and reusable ways to create objects
+		a. controls how and when the objects are created
+		b. Avoid tight coupling between the client code and concrete 		   classes
+		c. Make code more scalable, testable and maintainable
+
+
+	1. Singleton		Ensures only one instance exists
+	2. Factory Method	Delegate object creation to subclasses
+	3. Abstract Factory	Create families of related objects
+	4. Builder		Construct complex objects step by step
+	5. Prototype		Clone existing objects
+ 
+	
+2. Structural - how classes and objects are composed from a larger structure
+	a. They help ensure components fit together in a flexible and 
+	   efficient way
+	b. instead of focusing on object creation they focus on object 
+           composition
+	
+
+	Adapter		Convert one interface into another
+
+	Bridge		Decouple abstraction from implementation
+	
+	Composite	Represent part-whole hierarchies
+	
+	Decorator	Add responsibilities dynamically
+	
+	Facade		Provide a simplified interface
+	
+	Flyweight	Share common state to save memory
+
+	Proxy		Control access on Objects
+
+
+3. Behavioral - focus on how objects interact and communicate
+   They deal with object collaboration
+
+
+	Observer	Notify multiple when one changes
+
+	Strategy	Define interchangeable algorithm
+	
+	Command		Encapsulate request objects
+
+	State		Change behaviour based on internal state
+
+	Chain of
+	Responsibility	Pass request along a chain
+
+	Mediator	Centralize Communication
+
+	Memento		Save and restore state
+
+	Template Method	 Define algorithm skeleton, subclasses fill steps
+
+	Visitor		Add new operations without modifying operations
+
+	Interpreter	Define grammar and interpreter sentence
+
+	Iterator	Sequentially access elements of a collection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
