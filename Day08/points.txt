@@ -1,0 +1,84 @@
+Design patterns
+---------------
+1. Creational Patterns
+2. Structural Patterns
+3. Behavioral Patterns
+
+
+Example of Factory Pattern
+--------------------------
+Factory Pattern comes under Creational Pattern, where we talk about object creation, it abstracts and centralizes object creation. Instead of creating the object using the new operator the client code delegates this responsibility to a specialized factory class or method
+
+This pattern supports loose coupling and adheres to the Open / Close Principle meaning your system for extension (adding new type of objects) but closed for modification (no option to rewrite the existing business logic)
+
+Pizza Shop
+-----------
+order cheese pizza
+
+Payment types
+-------------
+CreditCard
+UPI
+Cash
+PayPal
+NetBanking
+GooglePay
+PhonePay
+
+
+Behavioral Pattern
+------------------
+Observer Pattern
+----------------
+Observer pattern is a behavioral design pattern that defines a one-to-many dependency between objects. It ensures that when an object changes its state all its dependents are automatically notified.
+
+
+Structural Pattern
+------------------
+Adapter Design Pattern
+----------------------
+Adapter Design pattern is a structural design pattern that allows object with incompatible interfaces to collaborate. It acts as a translator or a bridge wrapping an existing class with a new interface so that it matches what a client system expects
+
+
+• Multithreading
+
+• Multiprocessing
+
+• Async Programming
+
+
+img_urls = [
+    'https://images.unsplash.com/photo-1516117172878-fd2c41f4a759',
+    'https://images.unsplash.com/photo-1532009324734-20a7a5813719',
+    'https://images.unsplash.com/photo-1524429656589-6633a470097c',
+    'https://images.unsplash.com/photo-1530224264768-7ff8c1789d79',
+    'https://images.unsplash.com/photo-1564135624576-c5c88640f235',
+    'https://images.unsplash.com/photo-1541698444083-023c97d3f4b6',
+    'https://images.unsplash.com/photo-1522364723953-452d3431c267',
+    'https://images.unsplash.com/photo-1513938709626-033611b8cc03',
+    'https://images.unsplash.com/photo-1507143550189-fed454f93097',
+    'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e',
+    'https://images.unsplash.com/photo-1504198453319-5ce911bafcde',
+    'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99',
+    'https://images.unsplash.com/photo-1516972810927-80185027ca84',
+    'https://images.unsplash.com/photo-1550439062-609e1531270e',
+    'https://images.unsplash.com/photo-1549692520-acc6669e2f0c'
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
