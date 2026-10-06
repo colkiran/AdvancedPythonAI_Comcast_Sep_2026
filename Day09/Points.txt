@@ -1,0 +1,86 @@
+Multiprocessing
+---------------
+
+Multiprocessing vs multithreading
+---------------------------------
+
+Multiprocessing uses separate processes to achieve true parallelism across multiple CPU cores.
+
+Multithreading uses multiple threads in a single process to achieve concurrency via shared memory
+
+In python this distinction is heavily impacted by the GIL (Global Interpreter Lock) which prevents multiple threads from executing python bytecode at the exact same time.
+
+
+Multiprocessing - CPU bound tasks, each process has its own isolated memory space, by passes GIL as each process gets its own python interpreter, Data Sharing is complex, If one process crashes the others keep running
+
+Multithreading - IO bound tasks, All threads share the same memory of the parent process, Limited by GIL only one thread can execute python code at a time. Data sharing is easy, threads can directly access shared variables, if one thread crashes or corrupts memory the whole process can die.
+
+
+Async Programming
+------------------
+is a programming paradigm that allows a single threaded program to handle multiple tasks concurrently without blocking the execution of the main program
+
+Async Programming relies on three major components 
+
+1. Event Loop - The central Manager or orchestrator, it continuously runs in the background keeping track of all tasks, managing execution and shifting controls to another task when one is waiting for an external event.
+
+2. Coroutines - Special Functions defined using the async def syntax. When called they do not execute immediately instead the returns the coroutine object that must be scheduled on the event loop.  
+
+3. Awaitables - Objects that can be used with the await keyword. When you await a task you tell the event loop "This is gone a take a moment, Go ahead and run something else until this is done"
+
+
+Machine Learning Workflow using Scikit Learn
+--------------------------------------------
+what is machine learning
+
+what is AI
+
+What is deep learning 
+
+what is GENAI
+
+what is Agentic AI
+
+Key Stages of Machine learning workflow
+
+1. Problem definition
+
+2. Data Collection
+
+3. Data Processing and Cleaning
+
+4. EDA (Exploratory data analysis)
+
+5. Feature Engineering
+
+6. Model Training
+
+7. Model Evaluation and tuning
+
+8. Deployment
+
+9. Monitoring and Maintenance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
